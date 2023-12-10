@@ -1,9 +1,13 @@
 const buttons=document.querySelectorAll("button");
+const body=document.querySelector("body")
  let string="";
 const display=document.querySelector(".display")
 const ArrayBtn=Array.from(buttons);
+const mode=document.querySelector(".mode")
+
 ArrayBtn.forEach(AllVar=>{
     
+  
  AllVar.addEventListener("click",(event)=>{
     if(event.target.innerHTML=="="){
         string=eval(string)
@@ -26,3 +30,11 @@ ArrayBtn.forEach(AllVar=>{
 
  })
 })
+const darkOrWhite=()=>{
+    
+    mode.addEventListener("click",()=>{
+       body.classList.toggle("dark")
+    //    body.classList.toggle("white")
+    })
+}
+darkOrWhite()
